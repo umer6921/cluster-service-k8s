@@ -7,7 +7,11 @@ In Kubernetes, a "Service" is like a traffic cop for your applications. It helps
 3) LoadBalancing
 4) HeadLess
 
-ClusrerIP is used to communicate between pods from different nodes within the same cluster. It gives virtual IP to the cluster and the pods can use the VIP to communicate. 
+## ClusterIP?
+ClusterIP is employed for inter-pod communication across various nodes within the identical cluster, assigning a virtual IP to the cluster itself, which pods can then utilize for their communication needs. 
+
+## NodePort?
+NodePort is a way to make your applications in Kubernetes reachable from outside the cluster, allowing people or services on the internet to access your web applications or services running inside the cluster. 
 
 ## Why to use services?
 Services offer a solution for the dynamic nature of Pods' IP addresses within Kubernetes. Instead of dealing with the complexity of dynamic IP assignments where Pods can change their IP addresses, Services provide a stable and unchanging IP address that you can use to reliably access your Pods. This means that even if a Pod fails and is replaced with a new one, the Service ensures that you can consistently reach your application components using a single, static IP address.
