@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: cluster-service
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    name: service-deployment
+  type: ClusterIP
